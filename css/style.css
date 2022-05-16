@@ -1,3 +1,4 @@
+/*====  RESET ============================ */
 *{
     padding: 0;
     margin: 0;
@@ -12,7 +13,7 @@ img{
     height: auto;
 }
 
-/*VARIABLE*/
+/*====  VARIABLE  ============================ */
 :root{
     --header-height: 4.5rem;
 
@@ -29,6 +30,7 @@ img{
 
 }
 
+/*====  BASE ============================ */
 body{
     font: 400 1rem 'DM Sans', sans serif;
     color: var(--text-color) ;
@@ -49,21 +51,36 @@ h1{
     display: inline-flex;
     align-items: center;
     padding: 0 2rem;
+    border-radius: .25rem;
+    font: 500 1rem 'DM Sans', sans serif;
 
 }
+.button:hover{
+    background: var(--base-color-alt);
+    transition: background 0.3s;
+}
+
+.divider-1 {
+    height: 1px;
+    background: linear-gradient(
+      270deg,
+      hsla(var(--hue), 36%, 57%, 1) 0%,
+      hsla(var(--hue), 65%, 88%, 0.34) 100%
+    );
+  }
 
 
 
-
-/**/
+/*====  LAYOUT ============================ */
 #header{
     border-bottom: 1px solid #e4e4e4;
     margin-bottom: 2rem;
+    display: flex;
     
     
 }
 
-/**/
+
 nav{
     height: 4.5rem;
     display: flex;
@@ -71,7 +88,7 @@ nav{
     align-items: center;
 }
 
-/**/
+
 .logo{
     font: 700 1.875rem 'Popins' , sans-serif;
     color:var(--title-color);
@@ -80,7 +97,7 @@ nav{
     color: var(--base-color);
 }
 
-/**/
+
 .container{
     width: 100%;
     margin-left: 1.5rem;
@@ -94,6 +111,11 @@ nav{
 
 .section{
     padding: 5rem 0;
+}
+
+/*====  HOME ============================ */
+#home {
+    overflow: hidden;
 }
 
 #home .container{
@@ -137,4 +159,5 @@ margin-bottom: 1rem;
 }
 #home .text p {
     margin-bottom: 2rem;
+    max-width: 100px;
 }
